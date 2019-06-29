@@ -21,7 +21,7 @@ export default {
 
     // Gets the saved book with the given id
     getBook: function(id) {
-      return axios.sget("/api/savedbooks/" + id);
+      return axios.get("/api/savedbooks/" + id);
   },
 };
 
