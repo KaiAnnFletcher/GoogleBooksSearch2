@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import Container from "../components/Container";
-import { List, ListItem } from '../components/List';
+//import { List, ListItem } from '../components/List';
 import { Col, Row } from '../components/Grid';
 import Jumbotron from '../components/Jumbotron';
 import SaveBtn from '../components/SaveBtn';
@@ -43,7 +43,7 @@ class Search extends Component {
       <div>
       <Container>
         <Row>
-          <Col size="md-6 sm-12">
+          <Col size ="md-12">
             <Jumbotron>
               <h1>What Author Should I Search?</h1>
             </Jumbotron>
@@ -59,7 +59,7 @@ class Search extends Component {
             
           </Col>
 
-          <Col size="md-6 sm-12">
+          {/* <Col size="md-6 sm-12">
             <Jumbotron>
               <h1>Books On My List</h1>
             </Jumbotron>
@@ -79,7 +79,7 @@ class Search extends Component {
             ) : (
               <h3>No Results to Display</h3>
             )}
-          </Col>
+          </Col> */}
         </Row>
       </Container>
       </div>
