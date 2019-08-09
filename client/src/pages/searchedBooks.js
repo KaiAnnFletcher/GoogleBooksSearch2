@@ -5,7 +5,7 @@ import { List, ListItem } from '../components/List';
 import { Col, Row } from '../components/Grid';
 import Jumbotron from '../components/Jumbotron';
 import SaveBtn from '../components/SaveBtn';
-import searchForm from '../components/searchForm';
+import SearchForm from '../components/searchForm'
 
 class Search extends Component {
   state = {
@@ -43,12 +43,12 @@ class Search extends Component {
       <div>
       <Container>
         <Row>
-          <Col size="md-6">
+          <Col size="md-6 sm-12">
             <Jumbotron>
               <h1>What Author Should I Search?</h1>
             </Jumbotron>
             
-            <searchForm
+            <SearchForm
             handleFormSubmit={this.handleFormSubmit}
             handleInputChange={this.handleInputChange}
             books={this.state.books}
@@ -58,6 +58,7 @@ class Search extends Component {
               {/* <FormBtn>Submit Author</FormBtn> */}
             
           </Col>
+
           <Col size="md-6 sm-12">
             <Jumbotron>
               <h1>Books On My List</h1>
