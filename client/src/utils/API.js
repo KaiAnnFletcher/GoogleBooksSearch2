@@ -1,4 +1,6 @@
 import axios from "axios";
+
+
 import key from "./googlebooksearch/.env";
 
 // Export an object containing methods we'll use for accessing the Googlebooks API
@@ -6,9 +8,10 @@ import key from "./googlebooksearch/.env";
 export default {
     //Gets books via the API call
     getRandomBook: function(author) {
-        return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + author + ":keyes&key=" + key);
+      console.log("Hello get request");     
+      return axios.get("https://www.googleapis.com/books/v1/volumes?fields=kind,items(title,author/email)q=inauthor:" + author + "&key=" + key); 
     },
-
+     
     // Saves a book to the database
     saveBook: function(bookData) {
         return axios.post("/api/books", bookData);
@@ -24,5 +27,4 @@ export default {
       return axios.get("/api/savedbooks/" + id);
   },
 };
-
     

@@ -1,17 +1,24 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Books from "./pages/savedBooks";
-import Nav from "./components/Nav";
-import Search from "./pages/searchedBooks";
-//import SearchForm from "./components/searchForm";
+//import Books from "./pages/SavedBooks";
+import Navbar from "./components/Navbar";
+import Search from "./pages/Search";
+import About from "./pages/About";
+import Footer from "./components/Footer";
+import Wrapper from "./components/Wrapper";
 
 function App() {
   return (
     <Router>
     <div>
-      <Nav />
-      <Route exact path="/" component={Search} />
-      <Route exact path="/saved" component={Books} />
+    <Wrapper>
+      <Navbar />
+      <Route exact path="/" component={About} />
+      <Route exact path="/search" component={Search} />
+      <Route exact path="/about" component={About} />
+      {/* <Route exact path="/saved" component={Books} /> */}
+      <Footer />
+      </Wrapper>
     </div>
     </Router>
   );
