@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import Jumbotron from "../components/Jumbotron"
+import Jumbotron from "../components/Jumbotron";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input,  FormBtn } from "../components/SearchForm";
@@ -20,7 +20,7 @@ class Search extends Component {
 
   loadBooks = () => {
     API.getRandomBook()
-      .then(res => this.setState({ books: res.data.data }))
+      .then(res => this.setState({ books: res.data.items }))
       .catch(err => console.log(err));
   }
 
@@ -46,10 +46,10 @@ class Search extends Component {
         {this.state.books ? (
           <List>
             {this.state.books.map(book => (
-              <ListItem key={book._id}>
-                <a href={"/books/" + book._id}>
+              <ListItem key={book.id}>
+                <a href={"/books/" + book.id}>
                   <strong>
-                    {book.title} by {book.author}
+                    {book.volumeInfo.title} by {book.volumeInfo.author}
                   </strong>
                 </a>
                 {/* <DeleteBtn /> */}
