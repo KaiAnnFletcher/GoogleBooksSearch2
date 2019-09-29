@@ -2,7 +2,7 @@
 
 _What does this project do?_
 
-_ Please be aware that this is not a working version. I have kept this version as a reminder of the mistakes I made when creating this application. View the GoogleBooks project to start using the working version - [GoogleBooks](https://github.com/KaiAnnFletcher/GoogleBooks.git)._
+_Please be aware that this is not a working version. I have kept this version as a reminder of the mistakes I made when creating this application. View the GoogleBooks project to start using the working version - [GoogleBooks](https://github.com/KaiAnnFletcher/GoogleBooks.git)._
 
 * Search using any author's name and access the Google Books API to get useful information on popular books of your choice.
 
